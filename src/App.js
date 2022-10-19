@@ -35,12 +35,14 @@ function App() {
   return (
     <div className="App">
 
+      
+
       <h2>{strDrink}</h2>
       <img src={strDrinkThumb} width="180" height="180"/>
       <h3>{strCategory}</h3>
       <p>{strInstructions}</p>
 
-      <button onClick={Clk}>Try</button>
+      <button onClick={Clk}>Suprise Me</button>
 
      
       
