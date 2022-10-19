@@ -1,5 +1,8 @@
-
 import './App.css';
+import Card from './components/Card/Card.componenet';
+import SupriseButn from './components/SupriseButn/SupriseButn.component';
+import Ingredients from './components/Ingredient/Ingredient.component';
+import SendEmail from './components/SendEmail/SendEmail.component';
 import { useState, useEffect } from 'react'
 
 function App() {
@@ -14,7 +17,7 @@ function App() {
       .then(drinks => setDrink(drinks.drinks[0]))
       .catch(err => {
         let placeHolder = [{
-          strDrink: "Error with api",
+          strDrink: "Sorry!",
           strDrinkThumb: "https://static.thenounproject.com/png/3674270-200.png"
         }]
         setDrink(placeHolder[0])
@@ -24,25 +27,38 @@ function App() {
 
   const Clk = (e) =>{
     e.preventDefault() 
-    setInState(e)
+    setInState(e)   
     
   }
-  // Clk()
-  const {strDrink, strDrinkThumb,strInstructions,strCategory} = lastDrink
-  //console.log(lastDrink)
-  
+let count = 1
+let ingLi = []
+Object.entries(lastDrink).forEach(v => {
+     if(v[0] === `strIngredient${count}` && v[1] != null){
+        ingLi.push(" [" + v[1]+"] ")
+        count += 1
+    }
+}
+)
+const {strGlass} = lastDrink
+
   
   return (
     <div className="App">
+        
+      <div className='container'> 
+        <Card drink={lastDrink}/>
+        <Ingredients glass={strGlass}Ingredients={ingLi}/> 
+        <SupriseButn className="col-md-2 .offset-md-2" click={Clk}/>
+        
+      </div>
+      <SendEmail/>
 
       
+      
+      
 
-      <h2>{strDrink}</h2>
-      <img src={strDrinkThumb} width="180" height="180"/>
-      <h3>{strCategory}</h3>
-      <p>{strInstructions}</p>
-
-      <button onClick={Clk}>Suprise Me</button>
+      
+      
 
      
       
