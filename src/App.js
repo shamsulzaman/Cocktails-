@@ -2,7 +2,7 @@ import './App.css';
 import Card from './components/Card/Card.componenet';
 import SupriseButn from './components/SupriseButn/SupriseButn.component';
 import Ingredients from './components/Ingredient/Ingredient.component';
-import SendEmail from './components/SendEmail/SendEmail.component';
+//import SendEmail from './components/SendEmail/SendEmail.component';
 import { useState, useEffect } from 'react'
 
 function App() {
@@ -51,7 +51,7 @@ const {strGlass} = lastDrink
         <SupriseButn className="col-md-2 .offset-md-2" click={Clk}/>
         
       </div>
-      <SendEmail/>
+      
 
       
       
