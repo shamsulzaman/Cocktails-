@@ -44,7 +44,7 @@ const {strGlass} = lastDrink
   return (
     <div className="App">
         
-      <div className='container'> 
+      <div className='container bg-primary bg-gradient p-2 bg-opacity-25' > 
         <Card drink={lastDrink}/>
         <Ingredients glass={strGlass}Ingredients={ingLi}/> 
         <SupriseButn className="col-md-2 .offset-md-2" click={Clk}/>
