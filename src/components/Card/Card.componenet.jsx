@@ -1,5 +1,3 @@
-
-
 const Card =(props)=>{
     const {strDrink, strDrinkThumb,strInstructions,strCategory} = props.drink
     return(        

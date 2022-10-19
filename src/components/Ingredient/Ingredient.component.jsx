@@ -8,19 +8,10 @@ const Ingredients = (props) => {
             
             <div className="card-body">
                 <h5 className="card-title">Ingredient List</h5>
-                <p className="paraP">{Ingredients}</p>
-                
-                    
+                <p className="paraP">{Ingredients}</p>    
                 <p>{glassType}</p>
-
-                
-                
             </div>
         </div>
-
-
-
-
     )
 
 }

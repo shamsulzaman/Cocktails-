@@ -41,7 +41,6 @@ Object.entries(lastDrink).forEach(v => {
 )
 const {strGlass} = lastDrink
 
-  
   return (
     <div className="App">
         
@@ -51,17 +50,6 @@ const {strGlass} = lastDrink
         <SupriseButn className="col-md-2 .offset-md-2" click={Clk}/>
         
       </div>
-      
-
-      
-      
-      
-
-      
-      
-
-     
-      
     </div>
   );
 }
